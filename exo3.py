@@ -1,7 +1,7 @@
 from ev3  import LargeMotor  
 from ev3dev  import * 
 from ev3 import *
-from ev3 import InfraredSensor 
+from ev3 import InfraredSensor() 
 
 mot1 = LargeMotor('outB')
 assert m1.connected, "Connecter un large motor sur outB"
