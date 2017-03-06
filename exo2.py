@@ -17,21 +17,21 @@ def exitrouge():
          sleep(1)
          sys.exit(0)
 
-m1 = LargeMotor('outB')
+m1 = ev3.LargeMotor('outB')
 assert m1.connected, "Connecter un large motor sur outB"
-m2 = LargeMotor('outC')
+m2 = ev3.LargeMotor('outC')
 assert m2.connected, "Connecter un large motor sur outC"
 
 beeps(1)
 
-ir = InfraredSensor()
-assert ir.connected, "Connecter le senseur infrarouge a un des ports"
+ir = ev3.InfraredSensor()
+assert ir.connected, "Connecter svp le senseur infrarouge a un des ports"
 
 #Mettre le senseur infrarouge en mode de proximite
 ir.mode = 'IR-PROX'
 
-cl = ColorSensor() 
-assert cl.connected, "Connecter le senseur de couleur a un des ports"
+cl = ev3.ColorSensor() 
+assert cl.connected, "Connecter svp le senseur de couleur a un des ports"
 
 # Mettre le senseur en mode RGB
 cl.mode='RGB-RAW'
