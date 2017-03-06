@@ -3,6 +3,8 @@ import ev3dev.ev3 as ev3
 from ev3dev.ev3  import  *
 import sys
 
+ev3.Sound.setLanguage("French")
+
 # Detection des couleurs 
 cl = colorSENSOR () #définir le capteur comme capteur de couleur
 assert cl.connected, "Connecter un capteur de couleur à un port de capteur" #vérifier que le capteur est connecté sinon erreur
