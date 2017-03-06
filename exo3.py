@@ -5,6 +5,7 @@ class ev3dev.core.InfraredSensor
 
 obs_detection = InfraredSensor()
 
+distance = 30
 gauche = LargeMotor(port=LargeMotor.PORT.B)
 droite = LargeMotor(port=LargeMotor.PORT.C)
 
