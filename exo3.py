@@ -1,7 +1,7 @@
-from ev3  import LargeMotor  
-from ev3dev  import * 
-from ev3 import *
-from ev3 import ev3.InfraredSensor() 
+import LargeMotor  as ev3 
+import ev3dev.ev3 as ev3 
+ import * as ev3
+import ev3.InfraredSensor() as ev3
 import os, sys
 
 mot1 = ev3.LargeMotor('outB')
