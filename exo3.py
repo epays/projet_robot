@@ -1,7 +1,6 @@
-#!/usr/bin/env python3
-from ev3dev.ev3 import *
-from ev3.lego import InfraredSensor
-class ev3dev.core.InfraredSensor
+import LargeMotor  from ev3.lego 
+import * from ev3dev.ev3 
+import InfraredSensor from ev3.lego 
 
 obs_detection = InfraredSensor()
 
@@ -12,6 +11,7 @@ droite = LargeMotor(port=LargeMotor.PORT.C)
 if obs_detection <= distance:
             gauche.stop()
             droite.stop()
+
 
 
 
