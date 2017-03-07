@@ -8,7 +8,7 @@ import os, sys
 import time, random
 
 
-random.seed( time.time() )
+
 
 
         # Connecte les équipements nécessaires et on vérifie
