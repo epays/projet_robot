@@ -42,13 +42,13 @@ cur_distance = ir.value()
 m1.run_forever(speed_sp = 0)
 m2.run_forever(speed_sp = 0)
 
-while ir.value() > 2:
+while ir.value() > 30:
     exitrouge()  #stoppe avec panneau rouge
 
     cur_distance = ir.value()
     # print "Distance1 %d cur_distance" % cur_distance
 
-    while ir.value() > 7:
+    while ir.value() > 30:
        exitrouge()
 
        cur_distance = ir.value()
