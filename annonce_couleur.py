@@ -12,5 +12,5 @@ colors = ( 'inconnu', 'noir', 'bleu', 'vert', 'jaune', 'Au Revoir !', 'blanc', '
 while cl.value() != 5:
 	Sound.speak(color[cl.value()]).wait() #tant que la couleur est différente de rouge, le programme dicte les couleurs qu'il voit
 	sleep(2)
-if cl.values() == 5:
+if cl.value() == 5:
 	Sound.speak(colors[cl.value()]).wait() #si la couleur est rouge, le programme s'arrête
