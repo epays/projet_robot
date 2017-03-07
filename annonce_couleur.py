@@ -10,7 +10,7 @@ assert cl.connected, "Connecter un capteur de couleur à un port de capteur" #v�
 cl.mode = 'COL-COLOR' #mettre le capteur cl en mode reconnaissance de couleur
 colors = ( 'inconnu', 'noir', 'bleu', 'vert', 'jaune', 'Au Revoir !', 'blanc', 'marron')
 while cl.value() != 5:
-	Sound.speak(color[cl.value()]).wait() #tant que la couleur est différente de rouge, le programme dicte les couleurs qu'il voit
+	Sound.speak(colors[cl.value()]).wait() #tant que la couleur est différente de rouge, le programme dicte les couleurs qu'il voit
 	sleep(2)
 if cl.value() == 5:
 	Sound.speak(colors[cl.value()]).wait() #si la couleur est rouge, le programme s'arrête
