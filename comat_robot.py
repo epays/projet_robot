@@ -33,13 +33,12 @@ class robotPls:
             m.stop_action = 'brake'
 
 
-lm.run_forever(speed_sp=500)
-rm.run_forever(speed_sp=500)
 
-if obs_detection.value <= distance:
-    m1.stop()
-    m2.stop()
-        
+
+while obs_detection.value >= distance:
+    lm.run_forever(speed_sp=500)
+    rm.run_forever(speed_sp=500)
+else      
     def shoot(self, direction='up'):
            
        # Lance une balle
@@ -52,4 +51,4 @@ if obs_detection.value <= distance:
     def shoot(direction):
     def on_press(state):
             if state: self.shoot(direction)
-    return on_press
+    return 0
