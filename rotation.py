@@ -1,7 +1,7 @@
 #!/usr/bin/env python3				
 from ev3dev.ev3 import *
 import ev3dev.ev3 as ev3
-from time       import sleep
+from time import sleep
 import sys
 
 m1 = ev3.LargeMotor('outB')
