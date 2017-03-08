@@ -4,7 +4,7 @@ from ev3dev.ev3 import *
 from ev3.ev3dev import InfraredSensor()
 import os, sys
 obs_detection = ev3.InfraredSensor()
-obs_detection.mode = 'IR-DIST-CM'
+obs_detection.mode = 'IR-PROX'
 distance = 30
 
 m1 = ev3.LargeMotor('outB')
@@ -15,15 +15,17 @@ assert m2.connected, "Connecter un large motor sur outC"
 m1.run_forever(speed_sp=500)
 m2.run_forever(speed_sp=500)
 
-if obs_detection.value <= distance:
+'''if obs_detection.value <= distance:
             m1.stop()
-            m2.stop()
+            m2.stop()'''
 
+while obs_detection.value > distance: 
+	m1.run_forever(speed_sp=500)
+	m2.run_forever(speed_sp=500)
+	time.sleep(0.2)
 
-
-
-
-
+m1.stop()
+m2.stop()
 
 
 
