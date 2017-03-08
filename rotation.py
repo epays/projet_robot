@@ -22,7 +22,7 @@ m2.run_forever(speed_sp = 400)
 cur_distance = 1000
 
 while cur_distance >= 0:
-cur_distance = ir.value()
+	cur_distance = ir.value()
 
 	if cur_distance <= 40: #Si la distance entre lobstacle et la machine est inférieure ou égale à 40
 		m1.stop() #Les moteurs s'arrêtent
@@ -34,6 +34,6 @@ cur_distance = ir.value()
 		sleep(3)
 		m1.run_forever(speed_sp = 400)
 		m2.run_forever(speed_sp = 400)
-	else
+	else:
 		m1.run_forever(speed_sp = 400)
 		m2.run_forever(speed_sp = 400)
