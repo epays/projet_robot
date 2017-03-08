@@ -5,14 +5,14 @@ from ev3dev.ev3 import *
 from ev3.ev3dev import InfraredSensor()
 from ev3.ev3dev import TouchSensor()
 import os, sys
-import time, random
+import time
 
 
 
 
 
         # Connecte les équipements nécessaires et on vérifie
-class patator:
+class Patator:
     def __init__(self):
         self.mm = ev3.MediumMotor()
         self.ir = ev3.InfraredSensor()
@@ -31,17 +31,17 @@ class patator:
 
        
 
-    def shoot(self, direction='up'):
-        """
-        Lance une balle
-        """
-        self.mm.run_to_rel_pos(speed_sp=900, position_sp=(-1080 if direction == 'up' else 1080))
-        while 'running' in self.mm.state:
-            time.sleep(0.1)
+    class Shooter(TRACK3R):
+
+    def __init__(self, medium_motor=OUTPUT_A):
+        TRACK3R.__init__(self, medium_motor)
+        self.remote.on_beacon = self.fire_ball
+
+    def fire_ball(self, state):
+        if state:
+            self.medium_motor.run_to_rel_pos(speed_sp=400, position_sp=3*360)
+        else:
+self.medium_motor.stop()
 
 
 
-        def shoot(direction):
-            def on_press(state):
-                if state: self.shoot(direction)
-            return on_press
